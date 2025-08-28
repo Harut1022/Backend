@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./add.css"> -->
+     <style>
+    body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 350px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 26px;
+  animation: slideDown 0.7s ease forwards;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #f9f9f9;
+  font-size: 14px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+input[type="text"]:focus {
+  transform: scale(1.03);
+  box-shadow: 0 0 8px rgba(116, 235, 213, 0.8);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #74ebd5, #9face6);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add User</h2>
+        <form action="/add" method="POST">
+            <label for="first">First</label>
+            <input type="text" id="first" name="first" />
+
+            <label for="last">Last</label>
+            <input type="text" id="last" name="last" />
+            <!-- <label for="profile">Picture</label>
+            <input type="file" id="profile" name="profile" accept="image/png, image/jpeg" /> -->
+            <button type="submit">Save</button>
+        </form>
+    </div>
+    <!-- <h1>Add User</h1>
+    <form action="/add" method="POST">
+        <div>
+            <label for="">First</label>
+            <input type="text" name="first" id="">
+        </div> 
+        <div>
+            <label for="">Last</label>
+            <input type="text" name="last" id="">
+        </div>
+        <button>Save</button>
+    </form> -->
+</body>
+</html>
