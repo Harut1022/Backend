@@ -44,3 +44,14 @@ const fs = require("fs")
 //     Promise.resolve().then(()=>console.log("E"))
 // })
 // console.log("F")
+
+
+
+
+setTimeout(() => {
+  console.log('hello');
+}, 50);
+
+fs.readFile(__filename, () => {
+  console.log('world');
+});
