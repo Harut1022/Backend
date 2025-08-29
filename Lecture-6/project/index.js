@@ -48,6 +48,18 @@ const fs = require("fs")
 
 
 
+// setTimeout(() => {
+//   console.log('hello');
+// }, 50);
+
+// fs.readFile(__filename, () => {
+//   console.log('world');
+// });
+
+
+
+const now = Date.now();
+
 setTimeout(() => {
   console.log('hello');
 }, 50);
@@ -55,3 +67,9 @@ setTimeout(() => {
 fs.readFile(__filename, () => {
   console.log('world');
 });
+
+setImmediate(() => {
+  console.log('immediate');
+});
+
+while(Date.now() - now < 2000) {} // 2 վայրկյան բլոկավորում
