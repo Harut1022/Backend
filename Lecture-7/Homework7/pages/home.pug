@@ -1,0 +1,55 @@
+doctype html
+html(lang="hy")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Գլխավոր էջ
+    link(rel="stylesheet", href="/home.css")
+  body
+    header.header
+      .logo MyApp
+      nav.nav
+        ul
+          li: a(href="/") Գլխավոր
+          li: a(href="/add") Ավելացնել Օգտագործող
+    main.hero
+      .hero-content
+
+        h1 Բարի գալուստ MyApp
+        - if(users.length === 0){
+            h2 Գրանցված օգտատերեր չկան
+
+        -}else{
+            table.user-table
+             thead
+              tr
+                th ID
+                th First Name
+                th Last Name
+                th Age
+                th Phone
+                th Email
+                th Actions
+              tbody
+              -users.map(user=>{
+                tr 
+                  td= user.id
+                  td=user.firstName
+                  td=user.lastName
+                  td= user.age 
+                  td= user.phone
+                  td=user.email
+                  td
+                    button.btn-edit(onclick=`alert('Edit ${user.firstName}')`) Edit
+                    button.btn-delete(onclick=`alert('Edit ${user.firstName}')`) Delete
+                
+              -})
+              
+        -}
+
+
+        p #{x}
+        a.btn(href="/add") Սկսել հիմա
+
+    footer.footer
+      p © 2025 MyApp. Բոլոր իրավունքները պաշտպանված են։

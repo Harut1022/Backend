@@ -11,7 +11,6 @@ app.get("/",(req,res)=>{
 })
 
 app.get("/add",(req,res)=>{
-
     res.render("add",)
 })
 app.get("/users",(req,res)=>{

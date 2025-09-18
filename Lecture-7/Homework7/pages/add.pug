@@ -1,0 +1,37 @@
+doctype html
+html(lang="hy")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Ստեղծել User
+    link(rel="stylesheet" href="/add.css")
+  body
+
+   main.container
+      .card
+
+       h1.card-title Օգտվող ավելացնել
+        form.user-form(action="/users" method="post" novalidate)
+          .grid
+            .field
+              label(for="firstName") Անուն
+              input#firstName(type="text" name="firstName" placeholder="" required)
+            .field
+              label(for="lastName") Ազգանուն
+              input#lastName(type="text" name="lastName" placeholder="" required)
+            .field
+              label(for="phone") Հեռախոսահամար
+              input#phone(type="tel" name="phone" placeholder="+374 XX XXXXXX" pattern="^\+?\d[\d\s-]{5,}$" required)
+            .field
+              label(for="email") Մեյլ
+              input#email(type="email" name="email" placeholder="example@mail.com" required)
+            .field
+              label(for="age") Տարիք
+              input#age(type="number" name="age" min="0" max="150" placeholder="")
+            .field
+              label(for="city") Քաղաք
+              input#city(type="text" name="city" placeholder="")
+          .actions
+            button.btn(type="submit") Ստեղծել
+            button.btn.btn-ghost(type="reset") Միացնել նորից
+            

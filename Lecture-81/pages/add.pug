@@ -1,0 +1,18 @@
+form#contactForm(method="post" action="/add")
+  .field
+    label(for="firstName") Անուն
+    input#firstName(type="text" name="firstName" required autocomplete="given-name" placeholder="Անուն")
+
+  .field
+    label(for="lastName") Ազգանուն
+    input#lastName(type="text" name="lastName" required autocomplete="family-name" placeholder="Ազգանուն")
+
+  .field
+    label(for="phone") Հեռախոսահամար
+    input#phone(type="tel" name="phone" required pattern="^\+?[0-9\\s\\-()]{7,20}$" placeholder="+374 77 123 456" autocomplete="tel")
+
+  .field
+    label(for="age") Տարիք
+    input#age(type="number" name="age" min="0" max="120" step="1" required placeholder="18")
+
+  button(type="add") Ուղարկել
