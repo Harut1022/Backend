@@ -1,0 +1,29 @@
+doctype html
+html(lang="hy")
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Login — Animated
+    // link to external CSS served from /css/auth.css
+    link(rel='stylesheet', href='./login.css')
+
+  body
+    .auth-wrap
+      h1 Մուտք
+      p.lead Մուտքագրիր քո տվյալները
+      form#loginForm(action='/login/users', method='post')
+        .field
+          input(type='text', id='login', name='login', placeholder=' ', )
+          label(for='login') Օգտանուն
+        .field
+          input(type='password', id='password', name='password', placeholder=' ', required)
+          label(for='password') Գաղտնաբառ
+
+        .actions
+          button.btn.btn-primary(type='submit') Մուտք
+
+      .register-wrap
+        a.register-btn(href= '/signup', type='button', id='registerBtn') Գրանցվել
+
+
+      

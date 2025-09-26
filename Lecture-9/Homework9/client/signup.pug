@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title Sign Up
+    link(rel="stylesheet", href="/login.css")
+  body
+    .auth-wrap
+      h1 Login
+      p.lead Մուտքագրիր քո տվյալները
+      form#loginForm(action='/signup/users/', method='post')
+        .field
+          input(type='text', id='name', name='name', placeholder=' ' , required)
+          label(for='name') Անուն
+        .field
+          input(type='text', id='surname', name='surname', placeholder=' ')
+          label(for='surname') Ազգանուն
+        .field
+          input(type='text', id='login', name='login', placeholder=' ', required)
+          label(for='login') Օգտանուն
+        .field
+          input(type='password', id='password', name='password', placeholder=' ', required)
+          label(for='password') Գաղտնաբառ
+
+        .actions
+          button.btn.btn-primary(type='submit') Գրանցում
+          
+
+      .register-wrap
+        a.register-btn(href= '/', type='button', id='registerBtn') Մուտք
+
